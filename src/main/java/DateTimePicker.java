@@ -42,24 +42,23 @@ import java.time.format.DateTimeFormatter;
  */
 public class DateTimePicker extends DatePicker {
 
-  // Формат отображения даты и времени по умолчанию
+  // Default date and date time formats
   public static final String DefaultFormat = "dd.MM.yyyy HH:mm";
   public static final String NoTimeFormat  = "dd.MM.yyyy";
 
   private DateTimeFormatter formatter = DateTimeFormatter.ofPattern(DefaultFormat);;
   private ObjectProperty<LocalDateTime> dateTimeValue = new SimpleObjectProperty<>(LocalDateTime.now());
 
-  // Если Timepicker не нужен, отрабатывем, как обычный контрол DatePicker с расширенной возможностью выбора месяца и года
+  // Default TimePicker control trigger
   private boolean isTimePickerEnabled = false;
 
-  // Переопределение DatePicker'a по умолчанию, добавляем в него свой контрол (TimePicker)
+  // DatePicker customization
   @Override
   protected Skin<?> createDefaultSkin () {
       return new DateTimePickerSkin(this, this.isTimePickerEnabled);
   }
 
-  // Тело класса с базовыми методами
-  // region Class Body with public methods
+  // Class Body with public methods
   private ObjectProperty<String> format = new SimpleObjectProperty<String>() {
     public void set(String newValue) {
       super.set(newValue);
@@ -67,7 +66,7 @@ public class DateTimePicker extends DatePicker {
     }
   };
 
-  // Конструктор
+  // Constructor
   public DateTimePicker() {
 
     if (this.isTimePickerEnabled)
@@ -99,7 +98,7 @@ public class DateTimePicker extends DatePicker {
     });
   }
 
-  // Конструктор
+  // Constructor
   public DateTimePicker(boolean isTimePickerEnabled) {
 
     this.isTimePickerEnabled = isTimePickerEnabled;
@@ -181,6 +180,4 @@ public class DateTimePicker extends DatePicker {
   private void simulateEnterPressed() {
     getEditor().fireEvent(new KeyEvent(getEditor(), getEditor(), KeyEvent.KEY_PRESSED, null, null, KeyCode.ENTER, false, false, false, false));
   }
-  // endregion
-  // -------------------------------------------------------------------------------------------------------------------
 }
