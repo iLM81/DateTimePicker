@@ -70,7 +70,10 @@ public class DateTimePicker extends DatePicker {
   // Конструктор
   public DateTimePicker() {
 
-    setFormat(DefaultFormat);
+    if (this.isTimePickerEnabled)
+      setFormat(DefaultFormat);
+    else
+      setFormat(NoTimeFormat);
     setConverter(new InternalConverter());
 
     valueProperty().addListener((observable, oldValue, newValue) -> {
