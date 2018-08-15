@@ -1,0 +1,124 @@
+* {
+    BACKGROUND_COLOR: #242E35;
+    LABEL_FORECOLOR: #98b0bb;
+    LABEL_HOVER_COLOR: #364955;
+    LABEL_CURRENT_COLOR: #4f6370;
+    ITEM_SELECTION_COLOR: #364955;
+    READONLY_BACKGROUND_COLOR: #35434B;
+    ROOT_BACKGROUND_COLOR: #35434B;
+}
+.label {
+-fx-background-color: transparent;
+-fx-text-fill: LABEL_FORECOLOR;
+}
+.label:hover {
+-fx-background-color: LABEL_HOVER_COLOR;
+}
+.label-current {
+-fx-background-color: LABEL_CURRENT_COLOR;
+}
+.container-dark {
+  -fx-background-color: BACKGROUND_COLOR;
+}
+.button-iconified {
+  -fx-background-color: linear-gradient(#303d45 0%, #1d262c 100%);
+  -fx-background-radius: 10 8 6 4;
+  -fx-effect: dropshadow( three-pass-box , rgba(255,255,255,0.2) , 1, 0.0 , 0 , 1);
+  -fx-text-fill: LABEL_FORECOLOR;
+}
+
+.button-iconified:pressed {
+  -fx-background-color: linear-gradient(#79A4BF 0%, #506475 49%, #3B4A57 50%, #1C262C 100%);
+  -fx-effect: dropshadow( three-pass-box , rgba(255,255,255,0.2) , 1, 0.0 , 0 , 1);
+}
+
+.button-iconified:selected:focused {
+  -fx-background-color: linear-gradient(#79A4BF 0%, #506475 49%, #3B4A57 50%, #1C262C 100%);
+  -fx-effect: dropshadow( three-pass-box , rgba(255,255,255,0.2) , 1, 0.0 , 0 , 1);
+}
+
+.button-iconified:hover {
+  -fx-background-color: linear-gradient(#79A4BF 0%, #506475 49%, #3B4A57 50%, #1C262C 100%);
+  -fx-effect: dropshadow( three-pass-box , rgba(255,255,255,0.2) , 1, 0.0 , 0 , 1);
+}
+
+.gridpane-datepicker {
+-fx-background-color: BACKGROUND_COLOR;
+}
+.combo-box {
+  -fx-background-color:
+   linear-gradient(#303d45 0%, #1d262c 100%);
+  -fx-background-radius: 10 8 6 4;
+  -fx-effect: dropshadow( three-pass-box , rgba(255,255,255,0.2) , 1, 0.0 , 0 , 1);
+}
+.combo-input {
+-fx-background-color: linear-gradient(#303d45 0%, #1d262c 100%);
+-fx-text-fill: TEXT_COLOR_LIGHT;
+}
+.combo-box-base:disabled,
+.list-cell:disabled
+{
+    -fx-opacity: 0.9;
+}
+.text-field {
+  -fx-background-color: #364955;
+  -fx-text-fill: LABEL_FORECOLOR;
+}
+.text-input {
+  -fx-background-color: ITEM_SELECTION_COLOR;
+  -fx-text-fill: LABEL_FORECOLOR;
+}
+.text-input:readonly {
+    -fx-background-color: READONLY_BACKGROUND_COLOR;
+    -fx-text-fill: LABEL_FORECOLOR;
+}
+.date-picker {
+    -fx-background-color: BACKGROUND_COLOR;
+}
+
+.date-picker > .arrow-button {
+  -fx-background-color: linear-gradient(#303d45 0%, #1d262c 100%);
+  -fx-text-fill: LABEL_FORECOLOR;
+}
+
+.date-picker .arrow-button .arrow{
+-fx-background-radius:0px ;
+-fx-background-color: LABEL_FORECOLOR;
+}
+
+.date-picker-popup > .month-year-pane {
+    -fx-padding: 0.588883em 0.5em 0.666667em 0.5em;
+    -fx-background-color: BACKGROUND_COLOR;
+    -fx-background-insets: 0 0 0 0, 0 0 1 0;
+}
+
+.date-cell {
+    -fx-background-color: BACKGROUND_COLOR;
+    -fx-border-color: ITEM_SELECTION_COLOR;
+    -fx-font-family: "Andalus";
+    -fx-font-size: 16.0;
+    -fx-text-fill: LABEL_FORECOLOR;
+}
+
+.date-cell:hover {
+    -fx-background-color: ITEM_SELECTION_COLOR;
+    -fx-font-family: "Andalus";
+    -fx-font-size: 16.0;
+    -fx-text-fill: LABEL_FORECOLOR;
+}
+
+.date-cell.selected {
+    -fx-background-color: linear-gradient(#ffa100 0%, #cd8100 49%, #c17900 50%, #513200 100%);
+    -fx-font-family: "Andalus";
+    -fx-font-size: 16.0;
+    -fx-text-fill: LABEL_FORECOLOR;
+}
+.hbox {
+    -fx-background-color: BACKGROUND_COLOR;
+}
+.vbox {
+  -fx-background-color: BACKGROUND_COLOR;
+}
+.pane {
+  -fx-background-color: BACKGROUND_COLOR;
+}
